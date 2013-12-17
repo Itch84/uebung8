@@ -31,7 +31,13 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
   end
   
-  
+  test "should not create project" do
+    sign_in @user
+    assert_no_difference('Project.count') do
+      xhr :post, :create, project: { name: "" }
+    end
+    assert_response :success
+  end
   
   
 end
