@@ -1013,3 +1013,128 @@ AbstractController::ActionNotFound (The action 'create' could not be found for P
 
 
   Rendered C:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:21:29 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/_project.html.erb (3.0ms)
+  Rendered projects/index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 223ms (Views: 171.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-12-17 15:21:30 +0100
+Processing by ProjectsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered projects/_form.html.erb (2.0ms)
+  Rendered projects/new.js.erb (18.0ms)
+Completed 200 OK in 48ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2013-12-17 15:21:32 +0100
+Processing by ProjectsController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/_form.html.erb (3.0ms)
+  Rendered projects/edit.js.erb (21.0ms)
+Completed 200 OK in 60ms (Views: 47.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2013-12-17 15:21:34 +0100
+Processing by ProjectsController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered projects/_form.html.erb (2.0ms)
+  Rendered projects/edit.js.erb (19.0ms)
+Completed 200 OK in 58ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:21:36 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/_project.html.erb (2.0ms)
+  Rendered projects/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2013-12-17 15:21:37 +0100
+Processing by ProjectsController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/_form.html.erb (2.0ms)
+  Rendered projects/edit.js.erb (18.0ms)
+Completed 200 OK in 49ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:24:19 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/_project.html.erb (3.0ms)
+  Rendered projects/index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 137ms (Views: 47.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-12-17 15:24:21 +0100
+Processing by ProjectsController#new as JS
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered projects/_form.html.erb (2.0ms)
+  Rendered projects/new.js.erb (17.0ms)
+Completed 200 OK in 48ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-12-17 15:24:23 +0100
+Processing by ProjectsController#create as JS
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"asdasd"}, "commit"=>"Save"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mProject Exists (1.0ms)[0m  SELECT 1 AS one FROM "projects" WHERE "projects"."name" = 'asdasd' LIMIT 1
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "projects" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 17 Dec 2013 14:24:23 UTC +00:00], ["name", "asdasd"], ["updated_at", Tue, 17 Dec 2013 14:24:23 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  Rendered projects/_project.html.erb (2.0ms)
+  Rendered projects/create.js.erb (20.0ms)
+Completed 200 OK in 95ms (Views: 44.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2013-12-17 15:24:24 +0100
+Processing by ProjectsController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered projects/_form.html.erb (3.0ms)
+  Rendered projects/edit.js.erb (20.0ms)
+Completed 200 OK in 53ms (Views: 45.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:24:26 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/_project.html.erb (3.0ms)
+  Rendered projects/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 51ms (Views: 44.0ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/projects/3" for 127.0.0.1 at 2013-12-17 15:24:28 +0100
+Processing by ProjectsController#destroy as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "projects" WHERE "projects"."id" = ?  [["id", 3]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  Rendered projects/destroy.js.erb (1.0ms)
+Completed 200 OK in 86ms (Views: 47.0ms | ActiveRecord: 17.0ms)

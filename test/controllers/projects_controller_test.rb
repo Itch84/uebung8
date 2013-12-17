@@ -47,6 +47,16 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
   end
   
+  test "should get edit" do
+    sign_in @user
+    xhr :get, :edit, id: @project
+    assert_response :success
+  end
   
-  
+  test "should update project" do
+    sign_in @user
+    xhr :patch, :update, id: @project, project: { name: @project.name }
+    assert_response :success
+  end
+    
 end
