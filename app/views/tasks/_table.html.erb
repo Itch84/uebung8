@@ -4,8 +4,10 @@
     <tr>
       <th></th>
       <th>Name</th>
+      <th>Project</th>
       <th>Created</th>
-		<th>Delegated</th>
+      <th>Delegated</th>
+      
 	  <th>
 			<% if params[:sorting] == "deadline" %>
   			Deadline ^
@@ -35,6 +37,7 @@
   			<% end %>
 		</td>
         <td class="<%= css_class %>"><%= link_to task.name, edit_task_path(task) %></td>
+        <td> <%= task.project.name if task.project %> </td>
         <td> <%= task.user.username %> </td>
          <td>
 	      <%= "in " if !task.is_delayed? %> 

@@ -1406,3 +1406,1265 @@ Processing by ProjectsController#create as JS
   [1m[35m (0.0ms)[0m  rollback transaction
   Rendered projects/error.js.erb (2.0ms)
 Completed 200 OK in 66ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:33:19 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/_project.html.erb (5.0ms)
+  Rendered projects/index.html.erb within layouts/application (23.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 61.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:33:31 +0100
+Processing by TasksController#index as HTML
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC[0m
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (106.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35m (1.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (18.0ms)
+  Rendered tasks/index.html.erb within layouts/application (150.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 209ms (Views: 180.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+Processing by TasksController#index as HTML
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36m (1.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (34.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35m (1.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (15.0ms)
+  Rendered tasks/index.html.erb within layouts/application (102.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 145ms (Views: 138.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:36 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:37 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+Processing by TasksController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35m (1.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (34.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36m (0.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (16.0ms)
+  Rendered tasks/index.html.erb within layouts/application (70.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 108.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:53 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:54 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:54 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:54 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:34:54 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:35:12 +0100
+Processing by TasksController#index as HTML
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (32.0ms)
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35m (1.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (16.0ms)
+  Rendered tasks/index.html.erb within layouts/application (68.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 109ms (Views: 100.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:13 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+Processing by TasksController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (41.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35m (0.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC[0m
+  [1m[35mCACHE (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (18.0ms)
+  Rendered tasks/index.html.erb within layouts/application (81.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 123ms (Views: 116.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:28 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:35:29 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+Processing by TasksController#index as HTML
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36m (1.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (31.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35m (0.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (16.0ms)
+  Rendered tasks/index.html.erb within layouts/application (63.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 104ms (Views: 95.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:08 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:09 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:09 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:09 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:09 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:09 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:09 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:36:15 +0100
+Processing by TasksController#index as HTML
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (31.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36m (1.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (17.0ms)
+  Rendered tasks/index.html.erb within layouts/application (69.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 110ms (Views: 103.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:15 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:16 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:36:30 +0100
+Processing by TasksController#index as HTML
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36m (0.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (30.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36m (1.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (13.0ms)
+  Rendered tasks/index.html.erb within layouts/application (60.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 101ms (Views: 94.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:30 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:30 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:30 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:30 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:30 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:31 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+Processing by TasksController#index as HTML
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC[0m
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (42.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35m (1.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (32.0ms)
+  Rendered tasks/index.html.erb within layouts/application (94.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 146ms (Views: 138.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:46 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:36:47 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+Processing by TasksController#index as HTML
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36m (1.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (50.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36m (0.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (19.0ms)
+  Rendered tasks/index.html.erb within layouts/application (87.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 128ms (Views: 123.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:20 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:37:21 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+Processing by TasksController#index as HTML
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35m (0.0ms)[0m  SELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (33.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36m (0.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35mTask Load (0.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered tasks/_table.html.erb (16.0ms)
+  Rendered tasks/index.html.erb within layouts/application (67.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (4.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 110ms (Views: 104.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:02 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:02 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:02 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:02 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:02 +0100
+
+
+Started GET "/tasks" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+Processing by TasksController#index as HTML
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 'f'
+  [1m[36m (1.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 'f'[0m
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 'f' ORDER BY "tasks"."updated_at" DESC
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (1.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (39.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."done" = 't'
+  [1m[36m (1.0ms)[0m  [1mSELECT SUM("tasks"."duration") AS sum_id FROM "tasks" WHERE "tasks"."done" = 't'[0m
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."done" = 't' ORDER BY "tasks"."created_at" DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? ORDER BY "projects"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/_table.html.erb (17.0ms)
+  Rendered tasks/index.html.erb within layouts/application (83.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 124ms (Views: 116.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:41 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:38:42 +0100
