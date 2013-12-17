@@ -555,3 +555,211 @@ Processing by TasksController#index as HTML
   Rendered layouts/_navigation.html.erb (1.0ms)
   Rendered layouts/_messages.html.erb (0.0ms)
 Completed 200 OK in 125ms (Views: 119.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 14:59:36 +0100
+Processing by ProjectsController#index as HTML
+Completed 401 Unauthorized in 12ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-17 14:59:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 597ms (Views: 533.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-17 15:00:06 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vLsq1dNvwm7HoUYTqg1bssb8NBisOhFNz120dS8UKMo=", "user"=>{"email"=>"Alice@alice.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'alice@alice.com' ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 19ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vLsq1dNvwm7HoUYTqg1bssb8NBisOhFNz120dS8UKMo=", "user"=>{"email"=>"Alice@alice.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 240ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:07 +0100
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-17 15:00:19 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vLsq1dNvwm7HoUYTqg1bssb8NBisOhFNz120dS8UKMo=", "user"=>{"email"=>"Alive@alice.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'alive@alice.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 213ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vLsq1dNvwm7HoUYTqg1bssb8NBisOhFNz120dS8UKMo=", "user"=>{"email"=>"Alive@alice.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 239ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:19 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:19 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:19 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:19 +0100
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:20 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:20 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:20 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:20 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:20 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:20 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:20 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:20 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:20 +0100
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vLsq1dNvwm7HoUYTqg1bssb8NBisOhFNz120dS8UKMo=", "user"=>{"email"=>"Alive@alice.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'alive@alice.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (9.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Tue, 17 Dec 2013 14:00:24 UTC +00:00], ["current_sign_in_at", Tue, 17 Dec 2013 14:00:24 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 17 Dec 2013 14:00:24 UTC +00:00]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 259ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/_project.html.erb (3.0ms)
+  Rendered projects/index.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 68ms (Views: 51.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:00:24 +0100
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:00:26 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/_project.html.erb (3.0ms)
+  Rendered projects/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-12-17 15:00:27 +0100
+Processing by ProjectsController#new as JS
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered projects/_form.html.erb (3.0ms)
+  Rendered projects/new.js.erb (19.0ms)
+Completed 200 OK in 51ms (Views: 44.0ms | ActiveRecord: 0.0ms)
