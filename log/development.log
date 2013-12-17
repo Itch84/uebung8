@@ -1138,3 +1138,271 @@ Processing by ProjectsController#destroy as JS
   [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
   Rendered projects/destroy.js.erb (1.0ms)
 Completed 200 OK in 86ms (Views: 47.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:27:03 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/_project.html.erb (2.0ms)
+  Rendered projects/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 103ms
+
+ActionView::Template::Error (couldn't find file 'jquery.ui.effect.all'
+  (in C:/Sites/uebung8/app/assets/javascripts/application.js:15)):
+     5: 	
+     6:   <title>Uebung7</title>
+     7:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+     8:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+     9:   <%= csrf_meta_tags %>
+    10: </head>
+    11: <body>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___521573414_36606264'
+
+
+  Rendered C:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:27:03 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/_project.html.erb (1.0ms)
+  Rendered projects/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 69ms
+
+ActionView::Template::Error (couldn't find file 'jquery.ui.effect.all'
+  (in C:/Sites/uebung8/app/assets/javascripts/application.js:15)):
+     5: 	
+     6:   <title>Uebung7</title>
+     7:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+     8:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+     9:   <%= csrf_meta_tags %>
+    10: </head>
+    11: <body>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___521573414_36606264'
+
+
+  Rendered C:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (52.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:28:12 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/_project.html.erb (2.0ms)
+  Rendered projects/index.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 1158ms (Views: 1054.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/datepicker.css?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:13 +0100
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/jquery.ui.effect.all.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/bootstrap-datepicker.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-17 15:28:14 +0100
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-12-17 15:28:16 +0100
+Processing by ProjectsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered projects/_form.html.erb (20.0ms)
+  Rendered projects/new.js.erb (37.0ms)
+Completed 200 OK in 68ms (Views: 62.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-12-17 15:28:17 +0100
+Processing by ProjectsController#create as JS
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"asd"}, "commit"=>"Save"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mProject Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = 'asd' LIMIT 1[0m
+  [1m[35mSQL (16.0ms)[0m  INSERT INTO "projects" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 17 Dec 2013 14:28:18 UTC +00:00], ["name", "asd"], ["updated_at", Tue, 17 Dec 2013 14:28:18 UTC +00:00]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  Rendered projects/_project.html.erb (2.0ms)
+  Rendered projects/create.js.erb (25.0ms)
+Completed 200 OK in 126ms (Views: 55.0ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-12-17 15:28:19 +0100
+Processing by ProjectsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered projects/_form.html.erb (2.0ms)
+  Rendered projects/new.js.erb (21.0ms)
+Completed 200 OK in 52ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2013-12-17 15:28:21 +0100
+Processing by ProjectsController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/_form.html.erb (2.0ms)
+  Rendered projects/edit.js.erb (19.0ms)
+Completed 200 OK in 53ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2013-12-17 15:28:22 +0100
+Processing by ProjectsController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered projects/_form.html.erb (1.0ms)
+  Rendered projects/edit.js.erb (21.0ms)
+Completed 200 OK in 69ms (Views: 51.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:28:35 +0100
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/_project.html.erb (10.0ms)
+  Rendered projects/index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 81ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-12-17 15:28:36 +0100
+Processing by ProjectsController#new as JS
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered projects/_form.html.erb (3.0ms)
+  Rendered projects/new.js.erb (18.0ms)
+Completed 200 OK in 50ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2013-12-17 15:28:37 +0100
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/_project.html.erb (2.0ms)
+  Rendered projects/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 66ms (Views: 57.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-12-17 15:29:24 +0100
+Processing by ProjectsController#new as JS
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered projects/_form.html.erb (2.0ms)
+  Rendered projects/new.js.erb (19.0ms)
+Completed 200 OK in 50ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-12-17 15:29:26 +0100
+Processing by ProjectsController#create as JS
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>"asdsadasdsad"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProject Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = 'asdsadasdsad' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "projects" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 17 Dec 2013 14:29:26 UTC +00:00], ["name", "asdsadasdsad"], ["updated_at", Tue, 17 Dec 2013 14:29:26 UTC +00:00]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  Rendered projects/_project.html.erb (1.0ms)
+  Rendered projects/create.js.erb (16.0ms)
+Completed 200 OK in 69ms (Views: 41.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2013-12-17 15:29:54 +0100
+Processing by ProjectsController#new as JS
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered projects/_form.html.erb (2.0ms)
+  Rendered projects/new.js.erb (22.0ms)
+Completed 200 OK in 54ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2013-12-17 15:29:55 +0100
+Processing by ProjectsController#create as JS
+  Parameters: {"utf8"=>"✓", "project"=>{"name"=>""}, "commit"=>"Save"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mProject Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "projects" WHERE "projects"."name" = '' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered projects/error.js.erb (2.0ms)
+Completed 200 OK in 66ms (Views: 32.0ms | ActiveRecord: 0.0ms)

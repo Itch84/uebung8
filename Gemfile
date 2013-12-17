@@ -21,6 +21,9 @@ end
 #Use Devise for User Auth
 gem 'devise'
 
+#Use JQuery
+gem 'jquery-ui-rails' 
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
